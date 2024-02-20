@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="400.0" styleClass="bg-form" stylesheets="@../design/base.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginConnection">
+   <children>
+      <AnchorPane fx:id="loginPage" layoutY="68.0" prefHeight="569.0" prefWidth="400.0">
+         <children>
+            <AnchorPane layoutX="13.0" layoutY="16.0" prefHeight="315.0" prefWidth="375.0" styleClass="base" stylesheets="@../design/base.css">
+               <children>
+                  <TextField fx:id="username" layoutX="18.0" layoutY="76.0" prefHeight="50.0" prefWidth="250.0" promptText="Username" styleClass="textfield" stylesheets="@../design/base.css">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font></TextField>
+                  <PasswordField fx:id="password" layoutX="18.0" layoutY="136.0" prefHeight="50.0" prefWidth="250.0" promptText="Password" styleClass="textfield" stylesheets="@../design/base.css">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font></PasswordField>
+                  <Button fx:id="login" layoutX="285.0" layoutY="76.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="110.0" prefWidth="70.0" styleClass="btn" stylesheets="@../design/base.css" text="Login">
+                     <font>
+                        <Font name="HoloLens MDL2 Assets" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="105.0" layoutY="14.0" prefHeight="35.0" prefWidth="173.0" text="Book Reader" textFill="#73f3ff">
+                     <font>
+                        <Font name="Georgia" size="30.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon glyphName="USER" layoutX="25.0" layoutY="110.0" size="2.3em" text="" />
+                  <FontAwesomeIcon glyphName="LOCK" layoutX="26.0" layoutY="172.0" size="2.4em" />
+                  <Hyperlink fx:id="A" layoutX="126.0" layoutY="261.0" onAction="#switchForm" text="Criar usuário" textFill="#73f3ff">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="503.0" prefHeight="56.0" prefWidth="375.0" styleClass="base" stylesheets="@../design/base.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="11.0" text="Passtrough" textFill="#73f3ff">
+                     <font>
+                        <Font name="Georgia" size="30.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="passtrough" layoutX="327.0" layoutY="10.0" mnemonicParsing="false" onAction="#passthrough" prefHeight="0.0" prefWidth="0.0" textFill="#a3a4ff">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="registerPage" layoutY="65.0" prefHeight="360.0" prefWidth="400.0" visible="false">
+         <children>
+            <AnchorPane layoutX="13.0" layoutY="19.0" prefHeight="315.0" prefWidth="375.0" styleClass="base" stylesheets="@../design/base.css">
+               <children>
+                  <TextField fx:id="signUsername" layoutX="18.0" layoutY="76.0" prefHeight="50.0" prefWidth="250.0" promptText="Username" styleClass="textfield" stylesheets="@../design/base.css" />
+                  <PasswordField fx:id="signPassword" layoutX="18.0" layoutY="136.0" prefHeight="50.0" prefWidth="250.0" promptText="Password" styleClass="textfield" stylesheets="@../design/base.css" />
+                  <PasswordField fx:id="signConfirm" layoutX="18.0" layoutY="194.0" prefHeight="50.0" prefWidth="250.0" promptText="Confirm" styleClass="textfield" stylesheets="@../design/base.css" />
+                  <Button fx:id="signup" layoutX="285.0" layoutY="76.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="168.0" prefWidth="70.0" styleClass="btn" stylesheets="@../design/base.css" text="Signup">
+                     <font>
+                        <Font name="HoloLens MDL2 Assets" size="12.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon glyphName="LOCK" layoutX="26.0" layoutY="230.0" size="2.4em" />
+                  <Label layoutX="95.0" layoutY="14.0" prefHeight="35.0" prefWidth="185.0" text="Criar Usuário" textFill="#a3a4ff">
+                     <font>
+                        <Font name="Georgia" size="30.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon glyphName="USER" layoutX="25.0" layoutY="110.0" size="2.3em" text="" />
+                  <FontAwesomeIcon glyphName="LOCK" layoutX="26.0" layoutY="172.0" size="2.4em" />
+                  <Hyperlink fx:id="B" layoutX="157.0" layoutY="261.0" onAction="#switchForm" text="Login" textFill="#a3a4ff">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="276.0" layoutY="14.0" prefHeight="30.0" prefWidth="110.0" spacing="10.0">
+         <children>
+            <Circle fill="#ffffff00" radius="15.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Button fx:id="minimize" mnemonicParsing="false" onAction="#minimize" prefHeight="30.0" prefWidth="30.0" styleClass="minimize" stylesheets="@../design/base.css" />
+            <Button fx:id="close" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="30.0" styleClass="close" stylesheets="@../design/base.css" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
