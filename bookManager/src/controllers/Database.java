@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class Database {
 
-	private static final String PROPERTIES_FILE = "database.properties";
+	private static final String PROPERTIES_FILE = "mysql.properties";
 	
     public static Connection connectDB() {
     	try (InputStream input = Database.class.getClassLoader().getResourceAsStream(PROPERTIES_FILE)) {

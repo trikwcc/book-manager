@@ -8,11 +8,11 @@ public class SelectForm {
     private Image icon;
     private FXMLLoader loader;
 	
-	public void selectz(String icons, String base) {
+	public void selectz(String icons, String base, String css) {
 		try {
             icon = new Image(getClass().getResource(icons).toExternalForm());
             loader = new FXMLLoader(getClass().getResource(base));
-            String css = getClass().getResource("/design/base.css").toExternalForm();
+            css = getClass().getResource(css).toExternalForm();
             
 		} catch (Exception e) {e.printStackTrace();} 
 	}
@@ -24,4 +24,5 @@ public class SelectForm {
     public FXMLLoader getLoader() {
         return loader;
     }
+    
 }

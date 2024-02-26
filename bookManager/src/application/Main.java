@@ -18,12 +18,12 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
+    	MouseDrag mousedrag = new MouseDrag();
         SelectForm form = new SelectForm();
         Image icon = null;
         FXMLLoader loader = null;
         try {
-            MouseDrag mousedrag = new MouseDrag();
-            form.selectz("/design/Bookcase.png","/design/base.fxml");
+            form.selectz("/design/Bookcase.png","/design/base.fxml", "/design/base.css");
             icon = form.getIcon();
             loader = form.getLoader();
             Parent root = loader.load();
